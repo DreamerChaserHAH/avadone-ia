@@ -26,5 +26,5 @@ dotnet new install Avalonia.Templates
 
 To debug, you can run this:
 ```
-dotnet run
+dotnet run --project Avadone-ia.Presentation
 ```
