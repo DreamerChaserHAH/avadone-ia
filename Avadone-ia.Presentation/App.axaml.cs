@@ -4,7 +4,7 @@ using Avalonia.Markup.Xaml;
 
 namespace Avadone_ia;
 
-public partial class App : Application
+public partial class App : Avalonia.Application
 {
     public override void Initialize()
     {
