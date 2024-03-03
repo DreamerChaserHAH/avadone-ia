@@ -3,10 +3,11 @@
 public class ToDoItem
 {
     private ToDoItem() { } // Ef ctor
+    public int Id { get; private set; }
     public string TaskName { get; private set; } = null!;
     public string Description { get; private set; } = null!;
     public List<ToDoItem> SubTasks { get; private set; } = [];
-    public bool IsCompleted => SubTasks.All(task => task.IsCompleted);
+    public bool IsCompleted { get; private set; } = false;
     public ToDoItem(string taskName, string description, params ToDoItem[] tasks)
     {
         TaskName = taskName ?? throw new ArgumentNullException(nameof(taskName));
