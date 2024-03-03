@@ -1,0 +1,13 @@
+﻿using System.Linq.Expressions;
+
+namespace Avadone_ia.Application.Common.Interfaces.Persistence;
+
+public interface IRepository<T> where T : class
+{
+    void Add(T entity);
+    void Update(T entity);
+    void Delete(T entity);
+    T GetById(int id);
+    IList<T> GetAll();
+    bool Find(Expression<Func<T, bool>> predicate);
+}
