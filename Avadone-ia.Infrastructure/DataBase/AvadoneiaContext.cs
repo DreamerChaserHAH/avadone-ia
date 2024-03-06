@@ -1,7 +1,7 @@
 ﻿using Avadone_ia.Domain;
 using Microsoft.EntityFrameworkCore;
 
-namespace Avadone_ia.Infrastructure.DB;
+namespace Avadone_ia.Infrastructure.Database;
 
 public class AvadoneiaContext : DbContext
 {
