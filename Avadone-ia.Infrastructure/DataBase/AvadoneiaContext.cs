@@ -19,4 +19,11 @@ public class AvadoneiaContext : DbContext
     {
         optionsBuilder.UseSqlite("Data Source=userdata.db");
     }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.Entity<ToDo>().HasNoKey();
+        modelBuilder.Entity<ToDoItem>().HasNoKey();
+    }
 }
