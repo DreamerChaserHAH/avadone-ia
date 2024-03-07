@@ -10,7 +10,11 @@ public class AvadoneiaContext : DbContext
     public DbSet<ToDoItem> ToDoItem => Set<ToDoItem>();
     #endregion
 
-    public AvadoneiaContext()
+    
+    public AvadoneiaContext() : this(new DbContextOptions<AvadoneiaContext>())
+    { }
+
+    public AvadoneiaContext(DbContextOptions<AvadoneiaContext> options) : base(options)
     {
         Database.EnsureCreated();
     }
